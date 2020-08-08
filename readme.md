@@ -4,7 +4,9 @@
 
 This repo is created for demonstrating basic usage of [__evans__](https://github.com/ktr0731/evans) on the blog post. 
 
-https://mrturkmen.com/gRPC-calls-with-evans/
+Blog Post : https://mrturkmen.com/gRPC-calls-with-evans/
+
+Evans: https://github.com/ktr0731/evans
 
 - [Proto File](#proto-file)
 - [Compiling Proto](#compiling-proto)
