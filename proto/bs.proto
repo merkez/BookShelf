@@ -1,0 +1,59 @@
+// it is important to declare syntax version
+syntax = "proto3";
+service BookShelf {
+    rpc AddBook(AddBookRequest) returns (AddBookResponse) {}
+    rpc ListBook (ListBooksRequest) returns (ListBooksResponse) {}
+    rpc DelBook (DelBookRequest) returns (DelBookResponse){}
+    rpc FindBook (FindBookRequest) returns (FindBookResponse){}
+}
+
+
+message AddBookRequest {
+    BookInfo book = 1;
+    message BookInfo {
+        string isbn =1;
+        string name =2;
+        string author=3;
+        string addedBy=4;
+    }
+
+}
+
+message AddBookResponse {
+    string message = 1;
+}
+message ListBooksRequest {
+// no need to have anything
+// could be extended to list books based on category ...
+}
+
+message ListBooksResponse {
+    repeated BookInfo books =1;
+    message BookInfo {
+        string isbn =1;
+        string name =2;
+        string author=3;
+        string addedBy=4;
+    }
+}
+
+message  DelBookRequest {
+    string isbn =1;
+}
+
+message DelBookResponse {
+    string message =1;
+}
+message FindBookRequest {
+    string isbn =1;
+}
+
+message FindBookResponse {
+    Book book = 1;
+    message Book {
+        string isbn =1;
+        string name =2;
+        string author=3;
+        string addedBy=4;
+    }
+}
